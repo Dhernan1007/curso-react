@@ -1,0 +1,34 @@
+.tabla {
+    border: solid greenyellow 2px;
+    border-radius: 15px;
+    padding: 10px;
+    width: 50vw;
+    align-content: center;
+}
+
+.encabezado{
+    background-color: grey;
+    padding: 10px;
+    text-align: center;
+    border-right: solid 5px greenyellow;
+    margin-bottom: 5px;
+}
+
+.bodyT {
+    text-align: center;
+}
+
+.boton{
+    padding: 8px;
+    margin-top: 6px;
+    width: 20%;
+    color:#fff;
+    border: solid 2px rgb(244, 255, 87);
+    border-radius: 10px;
+    background-color: rgb(111, 114, 255);
+}
+
+.divContainer{
+    display: flex;
+    flex-direction: column;
+}
