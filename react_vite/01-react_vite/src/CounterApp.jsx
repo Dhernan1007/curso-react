@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 export const CounterApp = ({value}) => {
  
   const [ counter, setCounter] = useState(value)
-  function handleAdd(){
+  const handleAdd = ()=>{
     setCounter(counter + 1)
     //setCounter((c)=> c + 1) --> es lo mismo
   }
-  function handleRes(){
+  const handleRes = ()=>{
     setCounter(counter - 1)
   }
-  function handleMult(){
+  const handleMult = ()=>{
     setCounter(counter * 2)
   }
+
+  const handleReset = ()=> setCounter( value );
 
   return (
     <>
@@ -29,11 +31,15 @@ solo que al ser igual el arg de la funcion flecha y del manejador este se omite 
       <button onClick={handleMult}>
         x2
       </button>
+      {/* el area-label es un tipo de etiqueta que me permite identificar el botón esto me ayudará en los test */}
+      <button aria-label='btn-reset' onClick={handleReset}>
+        Reset
+      </button>
     </>
   )
 }
 
 CounterApp.propTypes = {
-    value: PropTypes.number,
+    value: PropTypes.number.isRequired,
 }
 
